@@ -5,10 +5,14 @@
       <map>
         <entry key="..\:/Users/akhma/Development learning/project android/Exercise/goodeva-test/task-coding/app/src/main/res/drawable-v24/ic_icons8_home.xml" value="0.119" />
         <entry key="..\:/Users/akhma/Development learning/project android/Exercise/goodeva-test/task-coding/app/src/main/res/drawable/ic_arrow_max.xml" value="0.119" />
+        <entry key="..\:/Users/akhma/Development learning/project android/Exercise/goodeva-test/task-coding/app/src/main/res/layout/activity_local_storage_example.xml" value="0.17777777777777778" />
         <entry key="..\:/Users/akhma/Development learning/project android/Exercise/goodeva-test/task-coding/app/src/main/res/layout/activity_main.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/akhma/Development learning/project android/Exercise/goodeva-test/task-coding/app/src/main/res/layout/activity_new_word.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/akhma/Development learning/project android/Exercise/goodeva-test/task-coding/app/src/main/res/layout/adapter_word.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/akhma/Development learning/project android/Exercise/goodeva-test/task-coding/app/src/main/res/layout/fragment_account.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/akhma/Development learning/project android/Exercise/goodeva-test/task-coding/app/src/main/res/layout/fragment_main.xml" value="0.25" />
         <entry key="..\:/Users/akhma/Development learning/project android/Exercise/goodeva-test/task-coding/app/src/main/res/layout/item_weather_next_hourly.xml" value="0.17777777777777778" />
+        <entry key="..\:/Users/akhma/Development learning/project android/Exercise/goodeva-test/task-coding/app/src/main/res/layout/word_item.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/akhma/Development learning/project android/Exercise/goodeva-test/task-coding/app/src/main/res/menu/menu_bottom.xml" value="0.22447916666666667" />
       </map>
     </option>
