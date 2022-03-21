@@ -17,11 +17,11 @@
             android:layout_width="40dp"
             android:layout_height="50dp"
             android:layout_centerVertical="true"
+            android:backgroundTint="@color/white"
             app:cornerRadius="50dp"
             app:icon="@drawable/ic_baseline_arrow_back_ios_24"
             app:iconGravity="textStart"
             app:iconPadding="-10dp"
-            android:backgroundTint="@color/white"
             app:iconTint="@color/black"
             app:strokeColor="@color/white"
             app:strokeWidth="1dp" />
@@ -47,8 +47,8 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:layout_below="@id/toolbarrr"
+        android:gravity="center"
         android:orientation="horizontal">
 
         <TextView
@@ -191,15 +191,59 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
-                android:text="Next Hourly"
+                android:text="Search By City"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rvListWeather"
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/outlinedTextFieldSearchCity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:boxCornerRadiusBottomEnd="20dp"
+                    app:boxCornerRadiusBottomStart="20dp"
+                    app:boxCornerRadiusTopEnd="20dp"
+                    android:layout_marginRight="8dp"
+                    app:boxCornerRadiusTopStart="20dp"
+                    app:boxBackgroundColor="#4D9088D4"
+                    android:layout_toLeftOf="@id/searchCity"
+                    app:boxStrokeColor="@color/purple_500"
+                    app:hintTextColor="@color/purple_500"
+                    android:hint="Search City"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_search_city"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/searchCity"
+                    android:layout_width="40dp"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:backgroundTint="@color/white"
+                    app:cornerRadius="50dp"
+                    app:icon="@drawable/ic_baseline_search_24"
+                    app:iconGravity="textStart"
+                    app:iconPadding="-10dp"
+                    android:layout_alignParentEnd="true"
+                    app:iconTint="@color/black"
+                    app:strokeColor="@color/white"
+                    app:strokeWidth="1dp" />
+
+            </RelativeLayout>
+
+<!--            <androidx.recyclerview.widget.RecyclerView-->
+<!--                android:id="@+id/rvListWeather"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent" />-->
 
         </LinearLayout>
 

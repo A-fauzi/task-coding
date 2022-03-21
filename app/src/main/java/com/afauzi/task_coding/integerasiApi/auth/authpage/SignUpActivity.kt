@@ -2,6 +2,7 @@ package com.afauzi.task_coding.integerasiApi.auth.authpage
 
 import android.content.Context
 import android.content.Intent
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -10,6 +11,7 @@ import android.widget.Toast
 import com.afauzi.task_coding.MainActivity
 import com.afauzi.task_coding.R
 import com.afauzi.task_coding.databinding.ActivitySignUpBinding
+import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.DatabaseReference
@@ -148,13 +150,21 @@ class SignUpActivity : AppCompatActivity() {
                     }
                 }
         } else if (userName.trim().isEmpty() && email.trim().isEmpty() && password.trim().isEmpty()) {
-            Toast.makeText(this, "Column is required!", Toast.LENGTH_SHORT).show()
+            val snackbar = Snackbar.make(binding.root, "Column is required!", Snackbar.LENGTH_SHORT)
+            snackbar.setBackgroundTint(Color.RED)
+            snackbar.show()
         } else if (userName.trim().isEmpty()) {
-            Toast.makeText(this, "Username is required!", Toast.LENGTH_SHORT).show()
+            val snackbar = Snackbar.make(binding.root, "Username is required!", Snackbar.LENGTH_SHORT)
+            snackbar.setBackgroundTint(Color.RED)
+            snackbar.show()
         } else if (email.trim().isEmpty()) {
-            Toast.makeText(this, "Email is required!", Toast.LENGTH_SHORT).show()
+            val snackbar = Snackbar.make(binding.root, "Email is required!", Snackbar.LENGTH_SHORT)
+            snackbar.setBackgroundTint(Color.RED)
+            snackbar.show()
         } else {
-            Toast.makeText(this, "Password is required!", Toast.LENGTH_SHORT).show()
+            val snackbar = Snackbar.make(binding.root, "Password is required!", Snackbar.LENGTH_SHORT)
+            snackbar.setBackgroundTint(Color.RED)
+            snackbar.show()
         }
 
     }

@@ -2,6 +2,7 @@ package com.afauzi.task_coding.integerasiApi.auth.authpage
 
 import android.content.Context
 import android.content.Intent
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -11,6 +12,7 @@ import android.widget.Toast
 import com.afauzi.task_coding.MainActivity
 import com.afauzi.task_coding.R
 import com.afauzi.task_coding.databinding.ActivityLoginBinding
+import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 
@@ -49,6 +51,7 @@ class LoginActivity : AppCompatActivity() {
         val user: FirebaseUser? = auth.currentUser
         if (user != null) {
             startActivity(Intent(this, MainActivity::class.java))
+            finish()
         } else {
             Toast.makeText(this, "Sign in with your account", Toast.LENGTH_SHORT).show()
         }
@@ -64,6 +67,7 @@ class LoginActivity : AppCompatActivity() {
                 .addOnCompleteListener { signIn ->
                     if (signIn.isSuccessful) {
                         actionToPageAndClearTask()
+                        finish()
                     } else {
                         Toast.makeText(
                             this,
@@ -73,11 +77,17 @@ class LoginActivity : AppCompatActivity() {
                     }
                 }
         } else if (signInPassword.trim().isEmpty() && signInEmail.trim().isEmpty()) {
-            Toast.makeText(this, "Column is required!", Toast.LENGTH_SHORT).show()
+            val snackbar = Snackbar.make(binding.root, "Column is required!", Snackbar.LENGTH_SHORT)
+            snackbar.setBackgroundTint(Color.RED)
+            snackbar.show()
         } else if (signInEmail.trim().isEmpty()) {
-            Toast.makeText(this, "Email Address is required!", Toast.LENGTH_SHORT).show()
+            val snackbar = Snackbar.make(binding.root, "Email is required!", Snackbar.LENGTH_SHORT)
+            snackbar.setBackgroundTint(Color.RED)
+            snackbar.show()
         } else {
-            Toast.makeText(this, "Password is required!", Toast.LENGTH_SHORT).show()
+            val snackbar = Snackbar.make(binding.root, "Password is required!", Snackbar.LENGTH_SHORT)
+            snackbar.setBackgroundTint(Color.RED)
+            snackbar.show()
         }
     }
 
