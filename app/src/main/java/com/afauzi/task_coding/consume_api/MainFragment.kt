@@ -67,6 +67,10 @@ class MainFragment : Fragment() {
 
         binding.searchCity.setOnClickListener {
 
+            val searchCity = binding.etSearchCity.text.toString()
+
+            binding.etSearchCity.text?.clear()
+
             closeKeyboard()
 
             val dialog =
@@ -84,9 +88,6 @@ class MainFragment : Fragment() {
             val humadity = dialogView.findViewById<TextView>(R.id.result_tvHumadity)
             val lottieViewInDialog =
                 dialogView.findViewById<LottieAnimationView>(R.id.result_iconTemp)
-
-
-            val searchCity = binding.etSearchCity.text.toString()
 
             if (searchCity.isEmpty()) {
                 Toast.makeText(activity, "Column search city is required!", Toast.LENGTH_SHORT).show()
