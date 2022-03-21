@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/consume_api"
+        android:title="Consume API" />
+
+    <item
+        android:id="@+id/api_integration"
+        android:title="API Integrasi" />
+
+    <item
+        android:id="@+id/local_storage"
+        android:title="Local Storage" />
+
+    <item
+        android:id="@+id/form_validator"
+        android:title="Form Validator" />
+
+    <item
+        android:id="@+id/sub_routine"
+        android:title="Sub Routine" />
+
+    <item
+        android:id="@+id/life_cycle"
+        android:title="Life Cycle" />
+
+    <item
+        android:id="@+id/use_git_basic"
+        android:title="Git Basic" />
+
+</menu>

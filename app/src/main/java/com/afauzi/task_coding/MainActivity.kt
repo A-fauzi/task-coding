@@ -13,6 +13,8 @@ import com.afauzi.task_coding.consume_api.MainFragment
 import com.afauzi.task_coding.databinding.ActivityMainBinding
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
 
 class MainActivity : AppCompatActivity() {
 

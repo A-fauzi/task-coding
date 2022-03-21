@@ -4,9 +4,11 @@ import android.annotation.SuppressLint
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.util.Log
+import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.PopupMenu
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.fragment.app.Fragment
@@ -50,6 +52,46 @@ class MainFragment : Fragment() {
         getCurrentWeather()
         binding.tvDate.text = currentTime()
 
+        binding.BtnMoreOption.setOnClickListener {
+            popupMenu()
+        }
+
+    }
+
+    @SuppressLint("RtlHardcoded")
+    private fun popupMenu() {
+
+        val popupMenu = PopupMenu(activity, binding.BtnMoreOption, Gravity.RIGHT)
+        popupMenu.menuInflater.inflate(com.afauzi.task_coding.R.menu.choose_task_menu, popupMenu.menu)
+        popupMenu.setOnMenuItemClickListener {
+//            dialogShowNotPage(it.title)
+            when (it.itemId) {
+                R.id.consume_api -> {
+                    Toast.makeText(activity, "Consume Api", Toast.LENGTH_SHORT).show()
+                }
+                R.id.api_integration -> {
+                    Toast.makeText(activity, "Api Integration", Toast.LENGTH_SHORT).show()
+                }
+                R.id.local_storage -> {
+                    Toast.makeText(activity, "Local Storage", Toast.LENGTH_SHORT).show()
+                }
+                R.id.form_validator -> {
+                    Toast.makeText(activity, "Form Validator", Toast.LENGTH_SHORT).show()
+                }
+                R.id.life_cycle -> {
+                    Toast.makeText(activity, "Activity Life Cycle", Toast.LENGTH_SHORT).show()
+                }
+                R.id.use_git_basic -> {
+                    Toast.makeText(activity, "Use Git Basic", Toast.LENGTH_SHORT).show()
+                }
+                R.id.sub_routine -> {
+                    Toast.makeText(activity, "Sub Routine", Toast.LENGTH_SHORT).show()
+                }
+            }
+
+            true
+        }
+        popupMenu.show()
     }
 
     override fun onRequestPermissionsResult(
